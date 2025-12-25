@@ -8,7 +8,13 @@ export class LogMessageBuilder {
     const { variable, context, config, languageConfig } = options;
     const logFunction = this.getLogFunction(languageConfig, config);
     const logMessage = this.buildLogMessage(variable, context, config);
-    return this.buildLogStatement(logFunction, logMessage, variable, config.quote, languageConfig);
+    let statement = this.buildLogStatement(logFunction, logMessage, variable, config.quote, languageConfig);
+
+    if (config.addSemicolon === true && !statement.endsWith(';')) {
+      statement += ';';
+    }
+
+    return statement;
   }
 
   private getLogFunction(languageConfig: LanguageConfig, config: UserConfig): string {
