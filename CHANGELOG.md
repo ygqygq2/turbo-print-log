@@ -2,14 +2,24 @@
 
 此文件记录 "turbo-print-var" 扩展的所有重要更改。
 
+# [4.0.1]
+
+## ✨ 新功能
+
+- 💡 CodeLens 支持：日志语句上方显示 Update/Comment/Delete 操作按钮
+- 📊 TreeView 统计面板：侧边栏显示日志统计信息
+- 🎛️ 可通过配置启用/禁用 CodeLens 和 TreeView 功能
+
+## 🛠️ 改进
+
+- ⚡ 性能优化：防抖机制减少资源消耗
+- 📝 修正配置文档，统一配置名称
+
 # [4.0.0]
 
 ## ✨ 新功能
 
-- 🌍 支持 20+ 种编程语言：
-  - C, C++, C#, CoffeeScript, D, C++, C#, CoffeeScript,
-  - JavaScript, TypeScript, JSX, TSX, Kotlin, Lua, Perl, PHP
-  - Python, R, Ruby, Rust, Scala, Shell Script, Swift
+- 🌍 支持 20+ 种编程语言
 - 🎯 智能变量检测，支持光标位置或选中内容
 - 📍 上下文感知的日志输出，包含文件名和行号
 - ⚡ 多光标支持，可同时处理多个变量

@@ -5,7 +5,7 @@
 /**
  * 输出通道标题
  */
-export const CHANNEL_TITLE = 'Turbo Print Log';
+export const CHANNEL_TITLE = 'Turbo Print Var';
 
 /**
  * 配置命名空间（用于读取VS Code配置）
@@ -26,4 +26,10 @@ export const COMMANDS = {
   COMMENT_LOGS: `${COMMAND_PREFIX}.commentLogs`,
   UNCOMMENT_LOGS: `${COMMAND_PREFIX}.uncommentLogs`,
   DELETE_LOGS: `${COMMAND_PREFIX}.deleteLogs`,
+  // CodeLens actions
+  UPDATE_SINGLE_LOG: `${COMMAND_PREFIX}.updateSingleLog`,
+  TOGGLE_COMMENT: `${COMMAND_PREFIX}.toggleComment`,
+  DELETE_SINGLE_LOG: `${COMMAND_PREFIX}.deleteSingleLog`,
+  // TreeView actions
+  REFRESH_TREE: `${COMMAND_PREFIX}.refreshTree`,
 } as const;

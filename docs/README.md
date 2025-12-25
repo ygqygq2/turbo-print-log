@@ -1,6 +1,6 @@
-# Turbo Print Log 文档
+# Turbo Print Var 文档
 
-欢迎使用 Turbo Print Log 扩展！本目录包含面向用户和开发者的完整文档。
+欢迎使用 Turbo Print Var 扩展！本目录包含面向用户和开发者的完整文档。
 
 ## 📚 文档索引
 

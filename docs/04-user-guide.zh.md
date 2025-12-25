@@ -4,7 +4,7 @@
 
 1. 打开 VS Code
 2. 进入扩展面板 (`Ctrl+Shift+X`)
-3. 搜索 "Turbo Print Log"
+3. 搜索 "Turbo Print Var"
 4. 点击安装
 
 ## 快速开始
@@ -55,13 +55,16 @@ const city = 'NYC';
 
 ```json
 {
-  "turbo-print-var.logFn": {
+  "turbo-print-var.logFunction": {
     "javascript": "logger.debug",
     "python": "logging.info",
-    "java": "logger.info"
+    "java": "logger.info",
+    "php": "error_log"
   }
 }
 ```
+
+**注意**：配置名称是 `logFunction`（对象类型），不是 `logFn`。
 
 ### 自定义格式
 
@@ -83,16 +86,48 @@ console.log('🔍 | file: app.js:10 | user:', user);
 
 ## 配置选项
 
-| 设置                              | 说明           | 默认值  | 示例                 |
-| --------------------------------- | -------------- | ------- | -------------------- |
-| `prefix`                          | 消息前缀       | `🚀`    | `🔍`, `DEBUG`, `>>>` |
-| `separator`                       | 元素分隔符     | `~`     | `\|`, `-`, `>>`      |
-| `quote`                           | 引号样式       | `"`     | `'`, `` ` ``         |
-| `logMessageSuffix`                | 变量后缀       | `:`     | `=`, `->`            |
-| `includeFileNameAndLineNum`       | 显示文件上下文 | `true`  | `false`              |
-| `addSemicolonInTheEnd`            | 添加分号       | `false` | `true`               |
-| `insertEmptyLineBeforeLogMessage` | 前面插入空行   | `false` | `true`               |
-| `insertEmptyLineAfterLogMessage`  | 后面插入空行   | `false` | `true`               |
+| 设置                 | 说明                   | 默认值  | 示例                 |
+| -------------------- | ---------------------- | ------- | -------------------- |
+| `prefix`             | 消息前缀               | `🚀`    | `🔍`, `DEBUG`, `>>>` |
+| `suffix`             | 变量名后缀             | `:`     | `=`, `->`            |
+| `separator`          | 元素分隔符             | `~`     | `\|`, `-`, `>>`      |
+| `quote`              | 引号样式               | `"`     | `'`, `` ` ``         |
+| `includeFileInfo`    | 显示文件名和行号       | `true`  | `false`              |
+| `addSemicolon`       | 添加分号               | 语言默认 | `true`, `false`      |
+| `emptyLineBefore`    | 日志前插入空行         | `false` | `true`               |
+| `emptyLineAfter`     | 日志后插入空行         | `false` | `true`               |
+| `logFunction`        | 自定义日志函数（对象） | `{}`    | 见下文               |
+| `enableCodeLens`     | 启用 CodeLens 功能     | `false` | `true`               |
+| `enableTreeView`     | 启用统计面板           | `false` | `true`               |
+
+### CodeLens 功能
+
+启用后，在每个日志语句上方显示操作按钮：
+
+```json
+{
+  "turbo-print-var.enableCodeLens": true
+}
+```
+
+功能：
+- **Update**: 更新行号
+- **Comment**: 注释/取消注释
+- **Delete**: 删除日志
+
+### TreeView 统计面板
+
+启用后，在侧边栏显示日志统计：
+
+```json
+{
+  "turbo-print-var.enableTreeView": true
+}
+```
+
+显示内容：
+- **Current File**: 当前文件的总数、活跃、已注释日志数
+- **Workspace**: 所有已打开文件的日志列表（最多 50 个）
 
 ## 语言支持
 

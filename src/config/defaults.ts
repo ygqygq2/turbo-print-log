@@ -14,4 +14,6 @@ export const DEFAULT_CONFIG: UserConfig = {
   separator: '~',
   includeFileInfo: true,
   logFunction: {},
+  enableCodeLens: false,
+  enableTreeView: false,
 };

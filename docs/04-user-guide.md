@@ -4,7 +4,7 @@
 
 1. Open VS Code
 2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for "Turbo Print Log"
+3. Search for "Turbo Print Var"
 4. Click Install
 
 ## Quick Start

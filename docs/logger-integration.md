@@ -15,13 +15,13 @@
   - `ParseError` 解析错误 (TPL-300x)
   - `SystemError` 系统错误 (TPL-400x)
   - `ErrorCodes` 错误码常量对象
-  - TPL = Turbo Print Log
+  - TPL = Turbo Print Var
 
 ### 3. 创建常量文件
 
 - 创建了 `src/utils/constants.ts`，包含：
   - `EXTENSION_ID`: 'turbo-print-var'
-  - `EXTENSION_NAME`: 'Turbo Print Log'
+  - `EXTENSION_NAME`: 'Turbo Print Var'
   - `CONFIG_PREFIX`: 'turbo-print-var'
 
 ### 4. 更新日志器实现

@@ -1,8 +1,8 @@
 {
   "name": "turbo-print-var",
-  "displayName": "Turbo Print Log - Multi-Language Debug Helper",
+  "displayName": "Turbo Print Var - Multi-Language Debug Helper",
   "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "publisher": "ygqygq2",
   "sponsor": {
     "url": "https://github.com/sponsors/ygqygq2"
@@ -27,7 +27,7 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Turbo Print Log Configuration",
+      "title": "Turbo Print Var",
       "properties": {
         "turbo-print-var.wrapLogMessage": {
           "type": "boolean",
@@ -84,31 +84,64 @@
             "php": "echo"
           },
           "description": "Custom log function per language."
+        },
+        "turbo-print-var.enableCodeLens": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable CodeLens (inline actions above log statements). Disable to improve performance."
+        },
+        "turbo-print-var.enableTreeView": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable TreeView (log statistics panel in sidebar). Disable to improve performance."
         }
       }
     },
     "commands": [
       {
         "command": "turbo-print-var.insertLog",
-        "title": "Turbo Print Log: Insert Log"
+        "title": "Turbo Print Var: Insert Log"
       },
       {
         "command": "turbo-print-var.updateLineNumbers",
-        "title": "Turbo Print Log: Update Line Numbers"
+        "title": "Turbo Print Var: Update Line Numbers"
       },
       {
         "command": "turbo-print-var.commentLogs",
-        "title": "Turbo Print Log: Comment Logs"
+        "title": "Turbo Print Var: Comment Logs"
       },
       {
         "command": "turbo-print-var.uncommentLogs",
-        "title": "Turbo Print Log: Uncomment Logs"
+        "title": "Turbo Print Var: Uncomment Logs"
       },
       {
         "command": "turbo-print-var.deleteLogs",
-        "title": "Turbo Print Log: Delete Logs"
+        "title": "Turbo Print Var: Delete Logs"
+      },
+      {
+        "command": "turbo-print-var.refreshTree",
+        "title": "Turbo Print Log: Refresh Statistics",
+        "icon": "$(refresh)"
       }
     ],
+    "views": {
+      "turbo-print-var-view": [
+        {
+          "id": "turboPrintVarStats",
+          "name": "Log Statistics",
+          "icon": "resources/images/logo-icon.svg"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "turbo-print-var-view",
+          "title": "Turbo Print Var",
+          "icon": "resources/images/logo-icon.svg"
+        }
+      ]
+    },
     "keybindings": [
       {
         "command": "turbo-print-var.insertLog",

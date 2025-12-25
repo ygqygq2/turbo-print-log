@@ -25,6 +25,8 @@ export class ConfigManager {
       separator: workspaceConfig.get('separator', DEFAULT_CONFIG.separator),
       includeFileInfo: workspaceConfig.get('includeFileInfo', DEFAULT_CONFIG.includeFileInfo),
       logFunction: workspaceConfig.get('logFunction', DEFAULT_CONFIG.logFunction),
+      enableCodeLens: workspaceConfig.get('enableCodeLens', true),
+      enableTreeView: workspaceConfig.get('enableTreeView', true),
     };
   }
 

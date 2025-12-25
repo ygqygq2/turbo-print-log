@@ -10,7 +10,7 @@ export const EXTENSION_ID = 'turbo-print-var';
 /**
  * 扩展名称
  */
-export const EXTENSION_NAME = 'Turbo Print Log';
+export const EXTENSION_NAME = 'Turbo Print Var';
 
 /**
  * 配置前缀

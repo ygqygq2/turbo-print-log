@@ -63,7 +63,7 @@ export class SystemError extends ExtensionError {
 
 /**
  * 错误码常量
- * TPL = Turbo Print Log
+ * TPL = Turbo Print Var
  */
 export const ErrorCodes = {
   // 配置类 TPL-100x
