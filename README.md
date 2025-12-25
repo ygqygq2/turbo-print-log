@@ -25,7 +25,7 @@
 - 🎨 **Customizable Format**: Configure log prefix, delimiter, quotes, and more
 - 🔧 **Powerful Commands**: Insert, update, comment, uncomment, and delete logs
 
-### �� Usage
+### 📖 Usage
 
 #### 1. Insert Log Statement
 
