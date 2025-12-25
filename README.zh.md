@@ -1,11 +1,11 @@
-# Turbo Print Log
+# Turbo Print Var
 
 <p align="center">
-  <img src="resources/images/logo.png" alt="Turbo Print Log" width="200">
+  <img src="resources/images/logo.png" alt="Turbo Print Var" width="200">
 </p>
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-var.svg?color=07c160&label=turbo-print-var&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![VS Code 安装量](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var?label=VS%20Code%20安装量)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-var?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-var)
 
 [English](./README.md) | [中文](./README.zh.md)
@@ -14,7 +14,7 @@
 
 ### 🚀 主要功能
 
-**Turbo Print Log** 是一个强大的 VS Code 扩展，可以为 **20+ 种编程语言**自动插入调试日志。它能智能生成包含文件名、行号和变量信息的上下文日志语句。
+**Turbo Print Var** 是一个强大的 VS Code 扩展，可以为 **20+ 种编程语言**自动插入调试日志。它能智能生成包含文件名、行号和变量信息的上下文日志语句。
 
 ### ✨ 核心亮点
 
@@ -56,17 +56,29 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 ### ⚙️ 配置选项
 
-| 设置                                              | 说明                          | 默认值  |
-| ------------------------------------------------- | ----------------------------- | ------- |
-| `turbo-print-var.logMessagePrefix`                | 日志消息前缀                  | `🚀`    |
-| `turbo-print-var.logMessageSuffix`                | 变量名后的后缀                | `:`     |
-| `turbo-print-var.delimiterInsideMessage`          | 元素之间的分隔符              | `~`     |
-| `turbo-print-var.quote`                           | 引号样式（`"`、`'`、`` ` ``） | `"`     |
-| `turbo-print-var.includeFileNameAndLineNum`       | 包含文件名和行号              | `true`  |
-| `turbo-print-var.addSemicolonInTheEnd`            | 末尾添加分号                  | `false` |
-| `turbo-print-var.insertEmptyLineBeforeLogMessage` | 日志前插入空行                | `false` |
-| `turbo-print-var.insertEmptyLineAfterLogMessage`  | 日志后插入空行                | `false` |
-| `turbo-print-var.logFunction`                     | 每种语言的自定义日志函数      | `{}`    |
+在 VS Code 设置中自定义扩展（`Ctrl+,` 或 `Cmd+,`）：
+
+| 设置                            | 说明                                  | 默认值 |
+| ---------------------------------- | -------------------------------------------- | ------- |
+| `turbo-print-var.prefix`           | 日志消息的前缀符号               | `🚀`    |
+| `turbo-print-var.suffix`           | 变量名后的后缀                   | `:`     |
+| `turbo-print-var.separator`        | 日志元素间的分隔符               | `~`     |
+| `turbo-print-var.quote`            | 引号样式：`"`、`'` 或 `` ` ``            | `"`     |
+| `turbo-print-var.includeFileInfo`  | 包含文件名和行号            | `true`  |
+| `turbo-print-var.addSemicolon`     | 末尾添加分号（未设置时自动检测）  | 自动    |
+| `turbo-print-var.emptyLineBefore`  | 日志前插入空行                 | `false` |
+| `turbo-print-var.emptyLineAfter`   | 日志后插入空行                  | `false` |
+| `turbo-print-var.logFunction`      | 每种语言的自定义日志函数             | `{}`    |
+
+**自定义日志函数示例：**
+```json
+{
+  "turbo-print-var.logFunction": {
+    "php": "var_dump",
+    "python": "print"
+  }
+}
+```
 
 ### 🌐 支持的语言
 

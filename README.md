@@ -1,11 +1,11 @@
-# Turbo Print Log
+# Turbo Print Var
 
 <p align="center">
-  <img src="resources/images/logo.png" alt="Turbo Print Log" width="200">
+  <img src="resources/images/logo.png" alt="Turbo Print Var" width="200">
 </p>
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ygqygq2.turbo-print-var.svg?color=07c160&label=turbo-print-var&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
-[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
+[![VS Code Installs](https://img.shields.io/visual-studio-marketplace/i/ygqygq2.turbo-print-var?label=VS%20Code%20installs)](https://marketplace.visualstudio.com/items?itemName=ygqygq2.turbo-print-var)
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/ygqygq2/turbo-print-var?label=open-vsx%20downloads)](https://open-vsx.org/extension/ygqygq2/turbo-print-var)
 
 [English](./README.md) | [中文](./README.zh.md)
@@ -14,7 +14,7 @@
 
 ### 🚀 Main Features
 
-**Turbo Print Log** is a powerful VS Code extension that automates debug log insertion for **20+ programming languages**. It intelligently generates context-aware log statements with file names, line numbers, and variable information.
+**Turbo Print Var** is a powerful VS Code extension that automates debug log insertion for **20+ programming languages**. It intelligently generates context-aware log statements with file names, line numbers, and variable information.
 
 ### ✨ Key Highlights
 
@@ -56,17 +56,29 @@ console.log('🚀 ~ file: app.js:2 ~ user:', user);
 
 ### ⚙️ Configuration
 
-| Setting                                           | Description                       | Default |
-| ------------------------------------------------- | --------------------------------- | ------- |
-| `turbo-print-var.logMessagePrefix`                | Prefix for log messages           | `🚀`    |
-| `turbo-print-var.logMessageSuffix`                | Suffix after variable name        | `:`     |
-| `turbo-print-var.delimiterInsideMessage`          | Delimiter between elements        | `~`     |
-| `turbo-print-var.quote`                           | Quote style (`"`, `'`, `` ` ``)   | `"`     |
-| `turbo-print-var.includeFileNameAndLineNum`       | Include file name and line number | `true`  |
-| `turbo-print-var.addSemicolonInTheEnd`            | Add semicolon at end              | `false` |
-| `turbo-print-var.insertEmptyLineBeforeLogMessage` | Insert empty line before log      | `false` |
-| `turbo-print-var.insertEmptyLineAfterLogMessage`  | Insert empty line after log       | `false` |
-| `turbo-print-var.logFunction`                     | Custom log function per language  | `{}`    |
+Customize the extension in VS Code settings (`Ctrl+,` or `Cmd+,`):
+
+| Setting                            | Description                                  | Default |
+| ---------------------------------- | -------------------------------------------- | ------- |
+| `turbo-print-var.prefix`           | Prefix symbol for log messages               | `🚀`    |
+| `turbo-print-var.suffix`           | Suffix after variable name                   | `:`     |
+| `turbo-print-var.separator`        | Delimiter between log elements               | `~`     |
+| `turbo-print-var.quote`            | Quote style: `"`, `'`, or `` ` ``            | `"`     |
+| `turbo-print-var.includeFileInfo`  | Include file name and line number            | `true`  |
+| `turbo-print-var.addSemicolon`     | Add semicolon at end (auto-detect if unset)  | auto    |
+| `turbo-print-var.emptyLineBefore`  | Insert empty line before log                 | `false` |
+| `turbo-print-var.emptyLineAfter`   | Insert empty line after log                  | `false` |
+| `turbo-print-var.logFunction`      | Custom log function per language             | `{}`    |
+
+**Example custom log function:**
+```json
+{
+  "turbo-print-var.logFunction": {
+    "php": "var_dump",
+    "python": "print"
+  }
+}
+```
 
 ### 🌐 Supported Languages
 
