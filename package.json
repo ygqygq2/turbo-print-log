@@ -2,7 +2,7 @@
   "name": "turbo-print-var",
   "displayName": "Turbo Print Var - Multi-Language Debug Helper",
   "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "publisher": "ygqygq2",
   "sponsor": {
     "url": "https://github.com/sponsors/ygqygq2"
@@ -129,7 +129,8 @@
         {
           "id": "turboPrintVarStats",
           "name": "Log Statistics",
-          "icon": "resources/images/logo-icon.svg"
+          "icon": "resources/images/logo-icon.svg",
+          "when": "config.turbo-print-var.enableTreeView"
         }
       ]
     },
@@ -138,7 +139,8 @@
         {
           "id": "turbo-print-var-view",
           "title": "Turbo Print Var",
-          "icon": "resources/images/logo-icon.svg"
+          "icon": "resources/images/logo-icon.svg",
+          "when": "config.turbo-print-var.enableTreeView"
         }
       ]
     },
