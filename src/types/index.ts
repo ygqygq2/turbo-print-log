@@ -6,7 +6,6 @@
  * 用户配置接口
  */
 export interface UserConfig {
-  wrapLogMessage: boolean;
   prefix: string;
   suffix: string;
   addSemicolon: boolean | undefined; // undefined 表示使用语言默认值

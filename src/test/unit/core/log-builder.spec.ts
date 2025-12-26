@@ -5,9 +5,8 @@ import { LanguageConfig, UserConfig } from '../../../types';
 
 describe('LogMessageBuilder', () => {
   const mockConfig: UserConfig = {
-    wrapLogMessage: false,
     prefix: '🚀',
-    suffix: ': ',
+    suffix: ':',
     addSemicolon: undefined,
     emptyLineBefore: false,
     emptyLineAfter: false,

@@ -2,7 +2,7 @@
   "name": "turbo-print-var",
   "displayName": "Turbo Print Var - Multi-Language Debug Helper",
   "description": "Intelligent multi-language debug log insertion tool supporting 20+ programming languages",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "publisher": "ygqygq2",
   "sponsor": {
     "url": "https://github.com/sponsors/ygqygq2"
@@ -29,11 +29,6 @@
       "type": "object",
       "title": "Turbo Print Var",
       "properties": {
-        "turbo-print-var.wrapLogMessage": {
-          "type": "boolean",
-          "default": false,
-          "description": "Determine if the log message should be wrapped or not."
-        },
         "turbo-print-var.prefix": {
           "type": "string",
           "default": "🚀",

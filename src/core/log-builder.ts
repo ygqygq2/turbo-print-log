@@ -48,6 +48,26 @@ export class LogMessageBuilder {
     return `${prefix}${variable}${config.suffix}`;
   }
 
+  /**
+   * 获取额外空格 - 某些使用字符串拼接的语言需要在 suffix 后添加空格
+   */
+  private getExtraSpace(languageId: string): string {
+    const needsExtraSpace = [
+      'java',
+      'kotlin',
+      'scala',
+      'csharp',
+      'coffeescript',
+      'ruby',
+      'perl',
+      'php',
+      'cpp',
+      'dart',
+      'groovy',
+    ];
+    return needsExtraSpace.includes(languageId) ? ' ' : '';
+  }
+
   private buildLogStatement(
     logFunction: string,
     logMessage: string,
@@ -55,7 +75,8 @@ export class LogMessageBuilder {
     quote: '"' | "'" | '`',
     languageConfig: LanguageConfig,
   ): string {
-    const escapedMessage = escapeString(logMessage, quote);
+    const extraSpace = this.getExtraSpace(languageConfig.id);
+    const escapedMessage = escapeString(logMessage + extraSpace, quote);
     return languageConfig.formatLog(logFunction, escapedMessage, variable, quote);
   }
 }

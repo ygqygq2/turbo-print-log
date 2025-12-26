@@ -91,7 +91,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: true,
-  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg} ${quote} + ${variable});`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote} + ${variable});`,
 });
 
 registerLanguage({
@@ -110,7 +110,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: true,
-  formatLog: (logFn, msg, variable, quote) => `${logFn} << ${quote}${msg} ${quote} << ${variable} << std::endl;`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn} << ${quote}${msg}${quote} << ${variable} << std::endl;`,
 });
 
 // C#
@@ -120,7 +120,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: true,
-  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg} ${quote} + ${variable});`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote} + ${variable});`,
 });
 
 // Go
@@ -152,7 +152,7 @@ registerLanguage({
   needsSemicolon: true,
   formatLog: (logFn, msg, variable, quote) => {
     const escapedMsg = msg.replace(/\$/g, '\\$');
-    return `${logFn} ${quote}${escapedMsg} ${quote} . ${variable};`;
+    return `${logFn} ${quote}${escapedMsg}${quote} . ${variable};`;
   },
 });
 
@@ -163,7 +163,7 @@ registerLanguage({
   commentSyntax: { line: '#' },
   defaultStringQuote: '"',
   needsSemicolon: false,
-  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg} ${quote} + ${variable}`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg}${quote} + ${variable}`,
 });
 
 // Swift
@@ -183,7 +183,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: false,
-  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg} ${quote} + ${variable});`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote} + ${variable});`,
 });
 
 // Scala
@@ -193,7 +193,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: false,
-  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg} ${quote} + ${variable});`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote} + ${variable});`,
 });
 
 // Groovy
@@ -203,7 +203,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: false,
-  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg} ${quote} + ${variable}`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg}${quote} + ${variable}`,
 });
 
 // Dart
@@ -213,7 +213,7 @@ registerLanguage({
   commentSyntax: { line: '//' },
   defaultStringQuote: '"',
   needsSemicolon: true,
-  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg} ${quote} + ${variable});`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn}(${quote}${msg}${quote} + ${variable});`,
 });
 
 // Lua
@@ -235,7 +235,7 @@ registerLanguage({
   needsSemicolon: true,
   formatLog: (logFn, msg, variable, quote) => {
     const escapedMsg = msg.replace(/\$/g, '\\$');
-    return `${logFn} ${quote}${escapedMsg} ${quote} . ${variable};`;
+    return `${logFn} ${quote}${escapedMsg}${quote} . ${variable};`;
   },
 });
 
@@ -266,5 +266,5 @@ registerLanguage({
   commentSyntax: { line: '#' },
   defaultStringQuote: '"',
   needsSemicolon: false,
-  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg} ${quote} + ${variable}`,
+  formatLog: (logFn, msg, variable, quote) => `${logFn} ${quote}${msg}${quote} + ${variable}`,
 });

@@ -15,7 +15,6 @@ export class ConfigManager {
     const workspaceConfig = vscode.workspace.getConfiguration(CONFIG_NAMESPACE);
 
     return {
-      wrapLogMessage: workspaceConfig.get('wrapLogMessage', DEFAULT_CONFIG.wrapLogMessage),
       prefix: workspaceConfig.get('prefix', DEFAULT_CONFIG.prefix),
       suffix: workspaceConfig.get('suffix', DEFAULT_CONFIG.suffix),
       addSemicolon: workspaceConfig.get('addSemicolon', DEFAULT_CONFIG.addSemicolon),
@@ -25,8 +24,8 @@ export class ConfigManager {
       separator: workspaceConfig.get('separator', DEFAULT_CONFIG.separator),
       includeFileInfo: workspaceConfig.get('includeFileInfo', DEFAULT_CONFIG.includeFileInfo),
       logFunction: workspaceConfig.get('logFunction', DEFAULT_CONFIG.logFunction),
-      enableCodeLens: workspaceConfig.get('enableCodeLens', true),
-      enableTreeView: workspaceConfig.get('enableTreeView', true),
+      enableCodeLens: workspaceConfig.get('enableCodeLens', DEFAULT_CONFIG.enableCodeLens),
+      enableTreeView: workspaceConfig.get('enableTreeView', DEFAULT_CONFIG.enableTreeView),
     };
   }
 

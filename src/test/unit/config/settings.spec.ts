@@ -37,7 +37,7 @@ describe('DEFAULT_CONFIG', () => {
     expect(DEFAULT_CONFIG.prefix).toBe('🚀');
     expect(DEFAULT_CONFIG.separator).toBe('~');
     expect(DEFAULT_CONFIG.quote).toBe('"');
-    expect(DEFAULT_CONFIG.suffix).toBe(': ');
+    expect(DEFAULT_CONFIG.suffix).toBe(':');
     expect(DEFAULT_CONFIG.includeFileInfo).toBe(true);
     expect(DEFAULT_CONFIG.addSemicolon).toBe(undefined);
   });
